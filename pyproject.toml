@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "dynamic-sinks-vector"
+version = "0.1.0"
+description = ""
+authors = ["Thenuja Viknarajah <thenuja_1@outlook.com>"]
+readme = "README.md"
+packages = [{ include = "dynamic-sinks-vector" }]
+
+
+[tool.poetry.dependencies]
+python = "^3.12"
+kubernetes = "^31.0.0"
+ruamel-yaml = "^0.18.6"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
