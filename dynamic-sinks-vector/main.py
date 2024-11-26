@@ -23,6 +23,7 @@ class NamespaceManager():
         return namespaces
 
 def main():
+    load_config()
     ns_client = NamespaceManager()
     namespaces = ns_client.get_client_namespaces()
 
@@ -33,7 +34,7 @@ def main():
         'reroute_unmatched': False
     }
 
-    with open('/etc/vector/agent.yaml', 'r') as config_file:
+    with open('/mnt/config/agent.yaml', 'r') as config_file:
         vector_config = yaml.load(config_file)
 
     if 'transforms' not in vector_config:
